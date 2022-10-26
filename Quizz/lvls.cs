@@ -80,13 +80,13 @@ namespace Quizz
 
         private void btn_lvl1_Click(object sender, EventArgs e)
         {
-            mainForm.OpenChildForm(new level(1), sender);
+            mainForm.OpenChildForm(new level(1, mainForm), sender);
         }
         private void btn_lvl2_Click(object sender, EventArgs e)
         {
             if (mainForm.Player.lvl == 2)
             {
-                mainForm.OpenChildForm(new level(2), sender);
+                mainForm.OpenChildForm(new level(2, mainForm), sender);
             }
         }
 
@@ -94,7 +94,7 @@ namespace Quizz
         {
             if (mainForm.Player.lvl == 3)
             {
-                mainForm.OpenChildForm(new level(3), sender);
+                mainForm.OpenChildForm(new level(3, mainForm), sender);
             }
         }
     }

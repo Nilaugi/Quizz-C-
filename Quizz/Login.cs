@@ -13,16 +13,27 @@ using Newtonsoft.Json;
 
 namespace Quizz
 {
-    //bdd gratuite user = nilaugi
-    //passwd = S3K6NvXSwml_0y6qz6xhjg
     public partial class Login : Form
     {
+        Players joueurs = new Players();
         public Players LoadjsonP() //Chargement d'un json
         {
-            string json = string.Empty;
-            json = File.ReadAllText(@"p_quizz.json");
-            Players LE_p = JsonConvert.DeserializeObject<Players>(json);
-            return LE_p;
+            if (mainForm.con)
+            {
+                System.Net.WebClient wc = new System.Net.WebClient();
+                string webData = wc.DownloadString("https://giulian-ladrier.fr/api.php");
+                List<Player> players = JsonConvert.DeserializeObject<List<Player>>(webData);
+                Players LE_p = new Players();
+                LE_p.players = players;
+                return LE_p;
+            }
+            else
+            {
+                string json = string.Empty;
+                json = File.ReadAllText(@"p_quizz.json");
+                Players LE_p = JsonConvert.DeserializeObject<Players>(json);
+                return LE_p;
+            }
         }
 
         lobby mainForm = null;
@@ -35,6 +46,7 @@ namespace Quizz
         {
             mainForm = callingForm as lobby;
             InitializeComponent();
+            joueurs = LoadjsonP();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -44,14 +56,14 @@ namespace Quizz
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int nb_player = LoadjsonP().players.Count;
+            int nb_player = joueurs.players.Count;
             for (int i = 0; i < nb_player; i++)
             {
-                if (txt_login_login.Text == LoadjsonP().players[i].name && txt_psswd_login.Text == LoadjsonP().players[i].passwd)
+                if (txt_login_login.Text == joueurs.players[i].name && txt_psswd_login.Text == joueurs.players[i].passwd)
                 {
                     label_test.Text = "réussite";
                     mainForm.Loginstate = true;
-                    mainForm.Player = LoadjsonP().players[i];
+                    mainForm.Player = joueurs.players[i];
                     mainForm.lobby_Load(sender, e);
                 }
             }
@@ -74,6 +86,14 @@ namespace Quizz
             if (txt_pseudo.Text != null)
             {
                 mainForm.Loginstate = true;
+                Player joueur = new Player()
+                {
+                    id = 0,
+                    name = txt_pseudo.Text,
+                    passwd = "",
+                    lvl = 1
+                };
+                mainForm.Player = joueur;
                 mainForm.lobby_Load(sender, e);
             }
             else
@@ -90,9 +110,8 @@ namespace Quizz
 
         private void btn_insc_Click(object sender, EventArgs e)
         {
-            int id_insc = LoadjsonP().players.Last().id;
+            int id_insc = joueurs.players.Last().id;
             id_insc++;
-            Players joueurs = LoadjsonP();
                 joueurs.players.Add(new Player()
                 {
                 id = id_insc,

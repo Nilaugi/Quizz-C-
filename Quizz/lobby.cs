@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 
 namespace Quizz
 {
@@ -26,7 +27,10 @@ namespace Quizz
            int nHeightEllipse // width of ellipse
        );
         Player player;
-        public Player Player
+
+        public bool con { get; private set; } // getter et setter privé de l'état de connexion à internet
+
+        public Player Player // Setter et Getter du joueur
         {
             get
             {
@@ -37,9 +41,10 @@ namespace Quizz
                 player = value;
             }
         }
+
         private bool loginstate;
 
-        public bool Loginstate
+        public bool Loginstate // Getter et Setter sur l'état de connexion du joueur
         {
             get
             {
@@ -51,10 +56,39 @@ namespace Quizz
             }
         }
 
+        public bool check_conn() // vérification de la connexion à internet par le ping à google
+        {
+            try
+            {
+                Ping myPing = new Ping();
+                String host = "google.com";
+                byte[] buffer = new byte[32];
+                int timeout = 1000;
+                PingOptions pingOptions = new PingOptions();
+                PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
+                return (true);
+            }
+            catch (Exception)
+            {
+                return (false);
+            }
+        }
+
         public lobby()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            this.Icon = Properties.Resources.question; 
+            if (check_conn())
+            {
+                label_con.Text = "Online";
+                con = true;
+            }
+            else
+            {
+                label_con.Text = "Offline";
+                con = false;
+            }
         }
 
 
@@ -69,14 +103,14 @@ namespace Quizz
         }
         public void lobby_Load(object sender, EventArgs e)
         {
-            /*if (loginstate == false)
+            if (loginstate == false)
             {
                 btn_selec_lvl.Visible = false;
             }
             else if (loginstate == true)
             {
                 btn_selec_lvl.Visible = true;
-            }*/
+            }
         }
 
 
@@ -184,6 +218,11 @@ namespace Quizz
                 panel1.BackColor = couleur_selec;
                 label_title.ForeColor = Color.Black;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

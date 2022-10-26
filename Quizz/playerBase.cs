@@ -6,7 +6,7 @@
         public string name { get; set; }
         public string passwd { get; set; }
         public int lvl { get; set; }
-        public List<int> score { get; set; }
+        public string score { get; set; }
     }
     public class Players //Liste de joueur
     {

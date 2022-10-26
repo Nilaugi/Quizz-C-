@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz_Csharp\\Quizz\\Quizz.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz_Csharp\\Quizz\\Quizz.csproj",
         "packagesPath": "C:\\Users\\Saphy\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz_Csharp\\Quizz\\obj\\",
-=======
-    "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz-C-\\Quizz\\Quizz.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz-C-\\Quizz\\Quizz.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz-C-\\Quizz\\Quizz.csproj",
-        "projectName": "Quizz",
-        "projectPath": "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz-C-\\Quizz\\Quizz.csproj",
-        "packagesPath": "C:\\Users\\Saphy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz-C-\\Quizz\\obj\\",
->>>>>>> f1726a0bc8315a77f82763163642e6c63f106df8
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "vywneTAdI5bStfkJJMk5xNW0yGjHjoXN1z7TkbemABb+V8ZVsmG9Ed1O21Qbsw0bEzuvy4jfE+0Edo0rtRwHeg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz_Csharp\\Quizz\\Quizz.csproj",
-=======
-  "dgSpecHash": "e0gazknECipF77JFg9UmxPVV321WTcOti8vTutS3xKaZRDXHHAJ58VAS8mQVdBY7u+vwZZ3IgZK8BCY8o/ibsQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Saphy\\Desktop\\Projet\\Quizz-C-\\Quizz\\Quizz.csproj",
->>>>>>> f1726a0bc8315a77f82763163642e6c63f106df8
   "expectedPackageFiles": [
     "C:\\Users\\Saphy\\.nuget\\packages\\circularprogressbar\\2.8.0.16\\circularprogressbar.2.8.0.16.nupkg.sha512",
     "C:\\Users\\Saphy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

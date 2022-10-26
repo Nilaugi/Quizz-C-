@@ -9,6 +9,7 @@ namespace Quizz
     public partial class level : Form
     {
         //Initialisation de quelques variables
+        Form mainForm = new Form();
         int score = 0;
         int lvl = 0;
         int count = 0;
@@ -28,9 +29,11 @@ namespace Quizz
         {
             InitializeComponent();
         }
-        public level(int valeur) //A l'appel de level avec un paramètre à l'intérieur
+
+        public level(int valeur, Form callingForm) //A l'appel de level avec un paramètre à l'intérieur
         {
             InitializeComponent();
+            mainForm = callingForm as lobby;
             label_niveau.Text = "Niveau :" + valeur.ToString(); //Le label du niveau prend une valeur
             label_score.Text = "Score :" + score.ToString(); //Le label de score prend une valeur
             timer_user.Start();
@@ -58,6 +61,11 @@ namespace Quizz
         //Fonction utile à la gestion des réponses du quizz
         public Root LoadjsonQ() //Chargement d'un json
         {
+            
+            if (true)
+            {
+
+            }
             string json = string.Empty;
             json = File.ReadAllText(@"q_quizz.json");
             Root LA_q = JsonConvert.DeserializeObject<Root>(json);
