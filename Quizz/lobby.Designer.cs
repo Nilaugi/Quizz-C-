@@ -54,7 +54,11 @@
             this.label_title.AutoSize = true;
             this.label_title.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_title.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+<<<<<<< HEAD
             this.label_title.Location = new System.Drawing.Point(14, 3);
+=======
+            this.label_title.Location = new System.Drawing.Point(14, 0);
+>>>>>>> f1726a0bc8315a77f82763163642e6c63f106df8
             this.label_title.Name = "label_title";
             this.label_title.Size = new System.Drawing.Size(91, 29);
             this.label_title.TabIndex = 2;
