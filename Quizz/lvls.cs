@@ -86,7 +86,7 @@ namespace Quizz
         {
             if (mainForm.Player.lvl == 2)
             {
-                mainForm.OpenChildForm(new level(2, mainForm), sender);
+                mainForm.OpenChildForm(new level(2, this), sender);
             }
         }
 
@@ -94,7 +94,7 @@ namespace Quizz
         {
             if (mainForm.Player.lvl == 3)
             {
-                mainForm.OpenChildForm(new level(3, mainForm), sender);
+                mainForm.OpenChildForm(new level(3, this), sender);
             }
         }
     }

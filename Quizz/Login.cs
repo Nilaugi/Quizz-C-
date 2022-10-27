@@ -21,7 +21,7 @@ namespace Quizz
             if (mainForm.con)
             {
                 System.Net.WebClient wc = new System.Net.WebClient();
-                string webData = wc.DownloadString("https://giulian-ladrier.fr/api.php");
+                string webData = wc.DownloadString("https://giulian-ladrier.fr/api.php?users=TazrbbRainrhubUahfbjnE");
                 List<Player> players = JsonConvert.DeserializeObject<List<Player>>(webData);
                 Players LE_p = new Players();
                 LE_p.players = players;

@@ -9,7 +9,7 @@ namespace Quizz
     public partial class level : Form
     {
         //Initialisation de quelques variables
-        Form mainForm = new Form();
+        private lobby mainForm = new lobby();
         int score = 0;
         int lvl = 0;
         int count = 0;
@@ -23,6 +23,7 @@ namespace Quizz
            int nWidthEllipse, // height of ellipse
            int nHeightEllipse // width of ellipse
        );
+        Root LA_q = new Root();
 
         //Initialisation des fonctions de bases
         public level() //A l'appel de level() :
@@ -32,8 +33,8 @@ namespace Quizz
 
         public level(int valeur, Form callingForm) //A l'appel de level avec un paramètre à l'intérieur
         {
-            InitializeComponent();
             mainForm = callingForm as lobby;
+            InitializeComponent();
             label_niveau.Text = "Niveau :" + valeur.ToString(); //Le label du niveau prend une valeur
             label_score.Text = "Score :" + score.ToString(); //Le label de score prend une valeur
             timer_user.Start();
@@ -48,7 +49,7 @@ namespace Quizz
         public class QuestionBase //Une question
         {
             public string question { get; set; }
-            public List<string> answers { get; set; }
+            public string answers { get; set; }
             public int correctIndex { get; set; }
             public string correction { get; set; }
         }
@@ -61,15 +62,23 @@ namespace Quizz
         //Fonction utile à la gestion des réponses du quizz
         public Root LoadjsonQ() //Chargement d'un json
         {
-            
-            if (true)
-            {
 
+            if (mainForm.con)
+            {
+                System.Net.WebClient wc = new System.Net.WebClient();
+                string webData = wc.DownloadString("https://giulian-ladrier.fr/api.php?questions=TibjkRinscmUmcpkbqE&lvl=1");
+                List<QuestionBase> questions = JsonConvert.DeserializeObject<List<QuestionBase>>(webData);
+                Root LA_q = new Root();
+                LA_q.questions = questions;
+                return LA_q;
             }
-            string json = string.Empty;
-            json = File.ReadAllText(@"q_quizz.json");
-            Root LA_q = JsonConvert.DeserializeObject<Root>(json);
-            return LA_q;
+            else
+            {
+                string json = string.Empty;
+                json = File.ReadAllText(@"q_quizz.json");
+                Root LA_q = JsonConvert.DeserializeObject<Root>(json);
+                return LA_q;
+            }
         }
         private void Next_Q() //Sers à afficher les questions et les réponses et affiche le classement
         {
@@ -86,13 +95,14 @@ namespace Quizz
                 {
                     button.Visible = true;
                 }
-                Root LA_q = LoadjsonQ();
+                LA_q = LoadjsonQ();
+                List<String> answers = LA_q.questions[lvl].answers.Split(';').ToList();
                 label_question.Text = LA_q.questions[lvl].question;
                 // label_n_q.Text = "Question : " + (lvl + 1);
-                btn_repA.Text = LA_q.questions[lvl].answers[0];
-                btn_repB.Text = LA_q.questions[lvl].answers[1];
-                btn_repC.Text = LA_q.questions[lvl].answers[2];
-                btn_repD.Text = LA_q.questions[lvl].answers[3];
+                btn_repA.Text = answers[0];
+                btn_repB.Text = answers[1];
+                btn_repC.Text = answers[2];
+                btn_repD.Text = answers[3];
             }
             else
             {
@@ -122,7 +132,7 @@ namespace Quizz
             int y = panel_correction.Location.Y;
             int sx = panel_correction.Size.Width;
             int sy = panel_correction.Size.Height;
-            string text = LoadjsonQ().questions[lvl].correction;
+            string text = LA_q.questions[lvl].correction;
             if (x < 198)
             {
                 x += 10;
@@ -131,11 +141,13 @@ namespace Quizz
                 sy += 10;
                 panel_correction.Location = new Point(x, y);
                 panel_correction.Size = new Size(sx, sy);
-            } else if (x > 198 && count <= text.Length)
+            }
+            else if (x > 198 && count <= text.Length)
             {
                 label_correction.Text = text.Substring(0, count);
                 count++;
-            } else if (label_correction.Text == text)
+            }
+            else if (label_correction.Text == text)
             {
                 count = 0;
                 lvl++;
@@ -149,8 +161,8 @@ namespace Quizz
         {
             label_n_q.Text = "exact !\n";
             timer_correction.Start();
-                score++;
-                label_score.Text = "Score : " + score.ToString();
+            score++;
+            label_score.Text = "Score : " + score.ToString();
             System.Media.SoundPlayer correct = new System.Media.SoundPlayer(Quizz.Properties.Resources.correct);
             correct.Play();
         }
