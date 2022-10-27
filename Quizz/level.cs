@@ -89,7 +89,7 @@ namespace Quizz
             label_n_q.Text = "";
             probar_timer.Value = 0;
             timer_user.Start();
-            if (lvl < 10)
+            if (lvl <= 10)
             {
                 foreach (var button in this.Controls.OfType<Button>())
                 {
@@ -98,7 +98,6 @@ namespace Quizz
                 LA_q = LoadjsonQ();
                 List<String> answers = LA_q.questions[lvl].answers.Split(';').ToList();
                 label_question.Text = LA_q.questions[lvl].question;
-                // label_n_q.Text = "Question : " + (lvl + 1);
                 btn_repA.Text = answers[0];
                 btn_repB.Text = answers[1];
                 btn_repC.Text = answers[2];
@@ -111,10 +110,6 @@ namespace Quizz
                     button.Visible = false;
                 }
                 label_question.Visible = false;
-                /*label_rank.Visible = true;*/
-                /*Players joueurs = LoadjsonP();
-                string j_json = JsonConvert.SerializeObject(joueurs);
-                File.WriteAllText(@"p_quizz.json", j_json);*/
             }
         }
 
@@ -153,8 +148,6 @@ namespace Quizz
                 lvl++;
                 timer_correction.Stop();
             }
-            // 377 => 100 = 25
-            // 20 => 210 = 
         }
 
         private void right_ans()
@@ -240,6 +233,4 @@ namespace Quizz
             }
         }
     }
-
-
 }
