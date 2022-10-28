@@ -128,16 +128,16 @@ namespace Quizz
             int sx = panel_correction.Size.Width;
             int sy = panel_correction.Size.Height;
             string text = LA_q.questions[lvl].correction;
-            if (x < 198)
+            if (x < 150)
             {
-                x += 10;
-                y -= 15;
-                sx += 16;
-                sy += 10;
-                panel_correction.Location = new Point(x, y);
-                panel_correction.Size = new Size(sx, sy);
+                x += 25;
+                y -= 25;
+                sx += 92;
+                sy += 42;
+                panel_correction.Location = new Point(210, 133);
+                panel_correction.Size = new Size(420, 265);
             }
-            else if (x > 198 && count <= text.Length)
+            else if (x >= 150 && count <= text.Length)
             {
                 label_correction.Text = text.Substring(0, count);
                 count++;
@@ -147,6 +147,7 @@ namespace Quizz
                 count = 0;
                 lvl++;
                 timer_correction.Stop();
+                panel_wait.Click += new System.EventHandler(panel_wait_Click);
             }
         }
 

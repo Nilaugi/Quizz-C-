@@ -52,9 +52,9 @@
             this.label_niveau.AutoSize = true;
             this.label_niveau.BackColor = System.Drawing.Color.Transparent;
             this.label_niveau.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_niveau.Location = new System.Drawing.Point(34, 23);
+            this.label_niveau.Location = new System.Drawing.Point(26, 23);
             this.label_niveau.Name = "label_niveau";
-            this.label_niveau.Size = new System.Drawing.Size(70, 23);
+            this.label_niveau.Size = new System.Drawing.Size(87, 28);
             this.label_niveau.TabIndex = 0;
             this.label_niveau.Text = "Niveau :";
             // 
@@ -68,7 +68,7 @@
             this.btn_repA.Location = new System.Drawing.Point(67, 74);
             this.btn_repA.Margin = new System.Windows.Forms.Padding(0);
             this.btn_repA.Name = "btn_repA";
-            this.btn_repA.Size = new System.Drawing.Size(220, 115);
+            this.btn_repA.Size = new System.Drawing.Size(300, 150);
             this.btn_repA.TabIndex = 10;
             this.btn_repA.Text = "Réponse A";
             this.btn_repA.UseVisualStyleBackColor = false;
@@ -82,10 +82,10 @@
             this.btn_repB.FlatAppearance.BorderSize = 0;
             this.btn_repB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_repB.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_repB.Location = new System.Drawing.Point(426, 74);
+            this.btn_repB.Location = new System.Drawing.Point(450, 74);
             this.btn_repB.Margin = new System.Windows.Forms.Padding(0);
             this.btn_repB.Name = "btn_repB";
-            this.btn_repB.Size = new System.Drawing.Size(220, 115);
+            this.btn_repB.Size = new System.Drawing.Size(300, 150);
             this.btn_repB.TabIndex = 10;
             this.btn_repB.Text = "Réponse B";
             this.btn_repB.UseVisualStyleBackColor = false;
@@ -99,10 +99,10 @@
             this.btn_repC.FlatAppearance.BorderSize = 0;
             this.btn_repC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_repC.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_repC.Location = new System.Drawing.Point(67, 223);
+            this.btn_repC.Location = new System.Drawing.Point(67, 313);
             this.btn_repC.Margin = new System.Windows.Forms.Padding(0);
             this.btn_repC.Name = "btn_repC";
-            this.btn_repC.Size = new System.Drawing.Size(220, 115);
+            this.btn_repC.Size = new System.Drawing.Size(300, 150);
             this.btn_repC.TabIndex = 10;
             this.btn_repC.Text = "Réponse C";
             this.btn_repC.UseVisualStyleBackColor = false;
@@ -116,10 +116,10 @@
             this.btn_repD.FlatAppearance.BorderSize = 0;
             this.btn_repD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_repD.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_repD.Location = new System.Drawing.Point(426, 223);
+            this.btn_repD.Location = new System.Drawing.Point(450, 313);
             this.btn_repD.Margin = new System.Windows.Forms.Padding(0);
             this.btn_repD.Name = "btn_repD";
-            this.btn_repD.Size = new System.Drawing.Size(220, 115);
+            this.btn_repD.Size = new System.Drawing.Size(300, 150);
             this.btn_repD.TabIndex = 10;
             this.btn_repD.Text = "Réponse D";
             this.btn_repD.UseVisualStyleBackColor = false;
@@ -132,7 +132,7 @@
             this.label_question.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_question.Location = new System.Drawing.Point(141, 23);
             this.label_question.Name = "label_question";
-            this.label_question.Size = new System.Drawing.Size(85, 23);
+            this.label_question.Size = new System.Drawing.Size(108, 28);
             this.label_question.TabIndex = 1;
             this.label_question.Text = "Question :";
             this.label_question.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,9 +143,9 @@
             this.label_n_q.AutoSize = true;
             this.label_n_q.BackColor = System.Drawing.Color.Transparent;
             this.label_n_q.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_n_q.Location = new System.Drawing.Point(535, 368);
+            this.label_n_q.Location = new System.Drawing.Point(613, 490);
             this.label_n_q.Name = "label_n_q";
-            this.label_n_q.Size = new System.Drawing.Size(85, 23);
+            this.label_n_q.Size = new System.Drawing.Size(108, 28);
             this.label_n_q.TabIndex = 1;
             this.label_n_q.Text = "Question :";
             // 
@@ -155,9 +155,9 @@
             this.label_score.AutoSize = true;
             this.label_score.BackColor = System.Drawing.Color.Transparent;
             this.label_score.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_score.Location = new System.Drawing.Point(344, 368);
+            this.label_score.Location = new System.Drawing.Point(350, 490);
             this.label_score.Name = "label_score";
-            this.label_score.Size = new System.Drawing.Size(68, 23);
+            this.label_score.Size = new System.Drawing.Size(86, 28);
             this.label_score.TabIndex = 1;
             this.label_score.Text = "Score : ";
             // 
@@ -166,9 +166,9 @@
             this.label_rank.AutoSize = true;
             this.label_rank.BackColor = System.Drawing.Color.Transparent;
             this.label_rank.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_rank.Location = new System.Drawing.Point(67, 368);
+            this.label_rank.Location = new System.Drawing.Point(67, 498);
             this.label_rank.Name = "label_rank";
-            this.label_rank.Size = new System.Drawing.Size(87, 23);
+            this.label_rank.Size = new System.Drawing.Size(112, 28);
             this.label_rank.TabIndex = 1;
             this.label_rank.Text = "classement";
             this.label_rank.Visible = false;
@@ -208,7 +208,6 @@
             this.panel_wait.Size = new System.Drawing.Size(20, 23);
             this.panel_wait.TabIndex = 0;
             this.panel_wait.Visible = false;
-            this.panel_wait.Click += new System.EventHandler(this.panel_wait_Click);
             // 
             // probar_timer
             // 
@@ -221,7 +220,7 @@
             this.probar_timer.InnerColor = System.Drawing.Color.Transparent;
             this.probar_timer.InnerMargin = 1;
             this.probar_timer.InnerWidth = -1;
-            this.probar_timer.Location = new System.Drawing.Point(684, 348);
+            this.probar_timer.Location = new System.Drawing.Point(788, 478);
             this.probar_timer.MarqueeAnimationSpeed = 2000;
             this.probar_timer.Name = "probar_timer";
             this.probar_timer.OuterColor = System.Drawing.Color.Gray;
@@ -250,11 +249,11 @@
             // 
             // level
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(736, 400);
+            this.ClientSize = new System.Drawing.Size(840, 530);
             this.Controls.Add(this.probar_timer);
             this.Controls.Add(this.panel_correction);
             this.Controls.Add(this.label_rank);

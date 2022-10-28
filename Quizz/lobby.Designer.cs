@@ -50,9 +50,8 @@
             this.panel1.Controls.Add(this.label_title);
             this.panel1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 32);
+            this.panel1.Size = new System.Drawing.Size(957, 43);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -60,9 +59,10 @@
             // 
             this.pBClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pBClose.Image = global::Quizz.Properties.Resources.close;
-            this.pBClose.Location = new System.Drawing.Point(798, 4);
+            this.pBClose.Location = new System.Drawing.Point(912, 5);
+            this.pBClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pBClose.Name = "pBClose";
-            this.pBClose.Size = new System.Drawing.Size(26, 22);
+            this.pBClose.Size = new System.Drawing.Size(30, 29);
             this.pBClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBClose.TabIndex = 4;
             this.pBClose.TabStop = false;
@@ -73,9 +73,9 @@
             this.label_con.AutoSize = true;
             this.label_con.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_con.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label_con.Location = new System.Drawing.Point(398, 4);
+            this.label_con.Location = new System.Drawing.Point(455, 5);
             this.label_con.Name = "label_con";
-            this.label_con.Size = new System.Drawing.Size(45, 19);
+            this.label_con.Size = new System.Drawing.Size(58, 24);
             this.label_con.TabIndex = 3;
             this.label_con.Text = "Conn?";
             // 
@@ -84,9 +84,9 @@
             this.label_title.AutoSize = true;
             this.label_title.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label_title.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label_title.Location = new System.Drawing.Point(12, 0);
+            this.label_title.Location = new System.Drawing.Point(14, 0);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(76, 23);
+            this.label_title.Size = new System.Drawing.Size(97, 29);
             this.label_title.TabIndex = 2;
             this.label_title.Text = "Quizzizz";
             this.label_title.Click += new System.EventHandler(this.label_title_Click);
@@ -97,10 +97,9 @@
             this.panel_menu.Controls.Add(this.btn_rank);
             this.panel_menu.Controls.Add(this.btn_selec_lvl);
             this.panel_menu.Controls.Add(this.btn_login);
-            this.panel_menu.Location = new System.Drawing.Point(0, 31);
-            this.panel_menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_menu.Location = new System.Drawing.Point(0, 41);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(106, 401);
+            this.panel_menu.Size = new System.Drawing.Size(121, 535);
             this.panel_menu.TabIndex = 1;
             // 
             // btn_rank
@@ -110,10 +109,9 @@
             this.btn_rank.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_rank.Image = global::Quizz.Properties.Resources.pika_run;
             this.btn_rank.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_rank.Location = new System.Drawing.Point(-3, 367);
-            this.btn_rank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_rank.Location = new System.Drawing.Point(-3, 489);
             this.btn_rank.Name = "btn_rank";
-            this.btn_rank.Size = new System.Drawing.Size(107, 32);
+            this.btn_rank.Size = new System.Drawing.Size(122, 43);
             this.btn_rank.TabIndex = 2;
             this.btn_rank.Text = "  Classement";
             this.btn_rank.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,10 +124,9 @@
             this.btn_selec_lvl.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_selec_lvl.Image = global::Quizz.Properties.Resources.game1;
             this.btn_selec_lvl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_selec_lvl.Location = new System.Drawing.Point(-2, 36);
-            this.btn_selec_lvl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_selec_lvl.Location = new System.Drawing.Point(-2, 48);
             this.btn_selec_lvl.Name = "btn_selec_lvl";
-            this.btn_selec_lvl.Size = new System.Drawing.Size(107, 32);
+            this.btn_selec_lvl.Size = new System.Drawing.Size(122, 43);
             this.btn_selec_lvl.TabIndex = 1;
             this.btn_selec_lvl.Text = "       Niveaux";
             this.btn_selec_lvl.UseVisualStyleBackColor = true;
@@ -143,9 +140,8 @@
             this.btn_login.Image = global::Quizz.Properties.Resources.imageonline_resizegif_4597902;
             this.btn_login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_login.Location = new System.Drawing.Point(-2, 0);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(107, 32);
+            this.btn_login.Size = new System.Drawing.Size(122, 43);
             this.btn_login.TabIndex = 0;
             this.btn_login.Text = "   Login";
             this.btn_login.UseVisualStyleBackColor = true;
@@ -154,22 +150,20 @@
             // panel_contenu
             // 
             this.panel_contenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel_contenu.Location = new System.Drawing.Point(101, 31);
-            this.panel_contenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel_contenu.Location = new System.Drawing.Point(115, 41);
             this.panel_contenu.Name = "panel_contenu";
-            this.panel_contenu.Size = new System.Drawing.Size(736, 400);
+            this.panel_contenu.Size = new System.Drawing.Size(840, 530);
             this.panel_contenu.TabIndex = 2;
             // 
             // lobby
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 430);
+            this.ClientSize = new System.Drawing.Size(955, 573);
             this.Controls.Add(this.panel_contenu);
             this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "lobby";
             this.Text = "Quizzizz";
             this.Load += new System.EventHandler(this.lobby_Load);
