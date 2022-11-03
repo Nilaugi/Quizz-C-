@@ -1,11 +1,1 @@
-{
-  "players": [
-    {
-      "id": 1,
-      "name": "Nilaugi",
-      "passwd": "Nilaugi",
-      "lvl": 2,
-      "score": "100000"
-    }
-  ]
-}
+{"players":[{"id":1,"name":"Nilaugi","passwd":"Nilaugi","lvl":2,"score":"08|06|04"},{"id":2,"name":"NewOne","passwd":"NewOne","lvl":1,"score":"04|00|00"},{"id":3,"name":"NewPlayer","passwd":"NewPlayer","lvl":1,"score":null}]}

@@ -56,6 +56,11 @@ namespace Quizz
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (checkBox_login.Checked)
+            {
+                txt_login_login.Text = "Nilaugi";
+                txt_psswd_login.Text = "Nilaugi";
+            }
             int nb_player = joueurs.players.Count;
             for (int i = 0; i < nb_player; i++)
             {
@@ -79,28 +84,6 @@ namespace Quizz
         private void label3_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btn_invite_Click(object sender, EventArgs e)
-        {
-            if (txt_pseudo.Text != null)
-            {
-                mainForm.Loginstate = true;
-                Player joueur = new Player()
-                {
-                    id = 0,
-                    name = txt_pseudo.Text,
-                    passwd = "",
-                    lvl = 1
-                };
-                mainForm.Player = joueur;
-                mainForm.lobby_Load(sender, e);
-            }
-            else
-            {
-                txt_pseudo.Clear();
-                txt_pseudo.Focus();
-            }
         }
 
         private void Login_Load(object sender, EventArgs e)

@@ -10,6 +10,7 @@ namespace Quizz
     {
         //Initialisation de quelques variables
         private lobby mainForm = new lobby();
+        int niveau = 0;
         int score = 0;
         int lvl = 0;
         int count = 0;
@@ -35,10 +36,11 @@ namespace Quizz
         {
             mainForm = callingForm as lobby;
             InitializeComponent();
-            label_niveau.Text = "Niveau :" + valeur.ToString(); //Le label du niveau prend une valeur
+            niveau = valeur;
+            label_niveau.Text = "Niveau :" + niveau.ToString(); //Le label du niveau prend une valeur
             label_score.Text = "Score :" + score.ToString(); //Le label de score prend une valeur
-            timer_user.Start();
             Next_Q(); //Next_Q() pour next question
+            timer_user.Start();
             foreach (var button in this.Controls.OfType<Button>())
             {
                 button.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, button.Width, button.Height, 50, 50));
@@ -80,7 +82,7 @@ namespace Quizz
                 return LA_q;
             }
         }
-        private void Next_Q() //Sers à afficher les questions et les réponses et affiche le classement
+        private void Next_Q([Optional] object sender) //Sers à afficher les questions et les réponses et affiche le classement
         {
             panel_wait.Visible = false;
             panel_correction.Visible = false;
@@ -110,6 +112,7 @@ namespace Quizz
                     button.Visible = false;
                 }
                 label_question.Visible = false;
+                mainForm.OpenChildForm(new Login(), sender);
             }
         }
 
@@ -221,7 +224,7 @@ namespace Quizz
         private void panel_wait_Click(object sender, EventArgs e)
         {
             label_correction.Text = "";
-            Next_Q();
+            Next_Q(sender);
         }
 
         private void timer_user_Tick(object sender, EventArgs e)

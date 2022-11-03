@@ -45,20 +45,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txt_pseudo = new System.Windows.Forms.TextBox();
-            this.panel_line_invite = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btn_invite = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label_test = new System.Windows.Forms.Label();
+            this.checkBox_login = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.picture_txt_psswd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_txt_login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_line_login
@@ -124,7 +118,7 @@
             this.label_clear_login.AutoSize = true;
             this.label_clear_login.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_clear_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label_clear_login.Location = new System.Drawing.Point(117, 279);
+            this.label_clear_login.Location = new System.Drawing.Point(100, 279);
             this.label_clear_login.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_clear_login.Name = "label_clear_login";
             this.label_clear_login.Size = new System.Drawing.Size(154, 25);
@@ -153,10 +147,9 @@
             this.txt_login_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.txt_login_login.Location = new System.Drawing.Point(65, 112);
             this.txt_login_login.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_login_login.Multiline = true;
             this.txt_login_login.Name = "txt_login_login";
             this.txt_login_login.PlaceholderText = "Login";
-            this.txt_login_login.Size = new System.Drawing.Size(186, 37);
+            this.txt_login_login.Size = new System.Drawing.Size(186, 27);
             this.txt_login_login.TabIndex = 0;
             // 
             // txt_psswd_login
@@ -166,11 +159,10 @@
             this.txt_psswd_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
             this.txt_psswd_login.Location = new System.Drawing.Point(64, 212);
             this.txt_psswd_login.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_psswd_login.Multiline = true;
             this.txt_psswd_login.Name = "txt_psswd_login";
             this.txt_psswd_login.PasswordChar = '*';
             this.txt_psswd_login.PlaceholderText = "Password";
-            this.txt_psswd_login.Size = new System.Drawing.Size(187, 37);
+            this.txt_psswd_login.Size = new System.Drawing.Size(187, 27);
             this.txt_psswd_login.TabIndex = 1;
             // 
             // txt_passwd_insc
@@ -179,12 +171,12 @@
             this.txt_passwd_insc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_passwd_insc.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txt_passwd_insc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.txt_passwd_insc.Location = new System.Drawing.Point(335, 212);
+            this.txt_passwd_insc.Location = new System.Drawing.Point(578, 212);
             this.txt_passwd_insc.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_passwd_insc.Multiline = true;
             this.txt_passwd_insc.Name = "txt_passwd_insc";
+            this.txt_passwd_insc.PasswordChar = '*';
             this.txt_passwd_insc.PlaceholderText = "Password";
-            this.txt_passwd_insc.Size = new System.Drawing.Size(187, 37);
+            this.txt_passwd_insc.Size = new System.Drawing.Size(187, 27);
             this.txt_passwd_insc.TabIndex = 3;
             this.txt_passwd_insc.UseSystemPasswordChar = true;
             // 
@@ -194,12 +186,11 @@
             this.txt_login_insc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_login_insc.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txt_login_insc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.txt_login_insc.Location = new System.Drawing.Point(336, 112);
+            this.txt_login_insc.Location = new System.Drawing.Point(579, 112);
             this.txt_login_insc.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_login_insc.Multiline = true;
             this.txt_login_insc.Name = "txt_login_insc";
             this.txt_login_insc.PlaceholderText = "Login";
-            this.txt_login_insc.Size = new System.Drawing.Size(186, 37);
+            this.txt_login_insc.Size = new System.Drawing.Size(186, 27);
             this.txt_login_insc.TabIndex = 2;
             // 
             // label_clear_insc
@@ -208,7 +199,7 @@
             this.label_clear_insc.AutoSize = true;
             this.label_clear_insc.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_clear_insc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label_clear_insc.Location = new System.Drawing.Point(387, 279);
+            this.label_clear_insc.Location = new System.Drawing.Point(617, 279);
             this.label_clear_insc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_clear_insc.Name = "label_clear_insc";
             this.label_clear_insc.Size = new System.Drawing.Size(154, 25);
@@ -223,7 +214,7 @@
             this.btn_insc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_insc.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_insc.ForeColor = System.Drawing.Color.White;
-            this.btn_insc.Location = new System.Drawing.Point(294, 360);
+            this.btn_insc.Location = new System.Drawing.Point(537, 360);
             this.btn_insc.Margin = new System.Windows.Forms.Padding(5);
             this.btn_insc.Name = "btn_insc";
             this.btn_insc.Size = new System.Drawing.Size(229, 51);
@@ -236,7 +227,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.panel1.Location = new System.Drawing.Point(294, 257);
+            this.panel1.Location = new System.Drawing.Point(537, 257);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 3);
@@ -246,7 +237,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.panel2.Location = new System.Drawing.Point(294, 155);
+            this.panel2.Location = new System.Drawing.Point(537, 155);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 3);
@@ -256,7 +247,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::Quizz.Properties.Resources.cadenas;
-            this.pictureBox1.Location = new System.Drawing.Point(294, 209);
+            this.pictureBox1.Location = new System.Drawing.Point(537, 209);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 37);
@@ -268,79 +259,13 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::Quizz.Properties.Resources.baby;
-            this.pictureBox2.Location = new System.Drawing.Point(294, 107);
+            this.pictureBox2.Location = new System.Drawing.Point(537, 107);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            // 
-            // txt_pseudo
-            // 
-            this.txt_pseudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_pseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_pseudo.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txt_pseudo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.txt_pseudo.Location = new System.Drawing.Point(610, 175);
-            this.txt_pseudo.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_pseudo.Multiline = true;
-            this.txt_pseudo.Name = "txt_pseudo";
-            this.txt_pseudo.PlaceholderText = "Pseudo";
-            this.txt_pseudo.Size = new System.Drawing.Size(186, 37);
-            this.txt_pseudo.TabIndex = 4;
-            // 
-            // panel_line_invite
-            // 
-            this.panel_line_invite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_line_invite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.panel_line_invite.Location = new System.Drawing.Point(568, 217);
-            this.panel_line_invite.Margin = new System.Windows.Forms.Padding(5);
-            this.panel_line_invite.Name = "panel_line_invite";
-            this.panel_line_invite.Size = new System.Drawing.Size(229, 3);
-            this.panel_line_invite.TabIndex = 17;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = global::Quizz.Properties.Resources.spy1;
-            this.pictureBox3.Location = new System.Drawing.Point(568, 169);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btn_invite
-            // 
-            this.btn_invite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_invite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.btn_invite.FlatAppearance.BorderSize = 0;
-            this.btn_invite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_invite.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_invite.ForeColor = System.Drawing.Color.White;
-            this.btn_invite.Location = new System.Drawing.Point(568, 360);
-            this.btn_invite.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_invite.Name = "btn_invite";
-            this.btn_invite.Size = new System.Drawing.Size(229, 51);
-            this.btn_invite.TabIndex = 10;
-            this.btn_invite.Text = "Passer incognito ...";
-            this.btn_invite.UseVisualStyleBackColor = false;
-            this.btn_invite.Click += new System.EventHandler(this.btn_invite_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label3.Location = new System.Drawing.Point(662, 239);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 25);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Effacer les infos";
             // 
             // label1
             // 
@@ -360,25 +285,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label4.Location = new System.Drawing.Point(318, 12);
+            this.label4.Location = new System.Drawing.Point(561, 12);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(197, 48);
             this.label4.TabIndex = 13;
             this.label4.Text = "Inscription";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label5.Location = new System.Drawing.Point(568, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(264, 48);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Simple visite ?";
             // 
             // label_test
             // 
@@ -386,12 +298,26 @@
             this.label_test.AutoSize = true;
             this.label_test.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_test.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label_test.Location = new System.Drawing.Point(13, 445);
+            this.label_test.Location = new System.Drawing.Point(376, 391);
             this.label_test.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label_test.Name = "label_test";
             this.label_test.Size = new System.Drawing.Size(46, 20);
             this.label_test.TabIndex = 20;
             this.label_test.Text = "Test";
+            // 
+            // checkBox_login
+            // 
+            this.checkBox_login.AutoSize = true;
+            this.checkBox_login.Checked = true;
+            this.checkBox_login.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_login.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBox_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.checkBox_login.Location = new System.Drawing.Point(322, 76);
+            this.checkBox_login.Name = "checkBox_login";
+            this.checkBox_login.Size = new System.Drawing.Size(102, 24);
+            this.checkBox_login.TabIndex = 21;
+            this.checkBox_login.Text = "Login auto";
+            this.checkBox_login.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -399,13 +325,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(838, 533);
+            this.Controls.Add(this.checkBox_login);
             this.Controls.Add(this.label_test);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_invite);
-            this.Controls.Add(this.txt_pseudo);
-            this.Controls.Add(this.panel_line_invite);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_passwd_insc);
             this.Controls.Add(this.txt_login_insc);
             this.Controls.Add(this.label_clear_insc);
@@ -436,7 +357,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture_txt_login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,14 +380,9 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private TextBox txt_pseudo;
-        private Panel panel_line_invite;
-        private PictureBox pictureBox3;
-        private Button btn_invite;
-        private Label label3;
         private Label label1;
         private Label label4;
-        private Label label5;
         private Label label_test;
+        private CheckBox checkBox_login;
     }
 }

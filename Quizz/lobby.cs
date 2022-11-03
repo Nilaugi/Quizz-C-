@@ -220,9 +220,16 @@ namespace Quizz
             }
         }
 
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_rank_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new rank(this), sender);
         }
 
 

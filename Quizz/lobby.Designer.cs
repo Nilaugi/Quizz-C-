@@ -116,6 +116,7 @@
             this.btn_rank.Text = "  Classement";
             this.btn_rank.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_rank.UseVisualStyleBackColor = true;
+            this.btn_rank.Click += new System.EventHandler(this.btn_rank_Click);
             // 
             // btn_selec_lvl
             // 
